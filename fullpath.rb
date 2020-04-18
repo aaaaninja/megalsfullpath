@@ -5,3 +5,4 @@ p mega_ls_results.map
                  .compact
                  .each_cons(2)
                  .map { |s_idx, e_idx| mega_ls_results[s_idx...e_idx] }
+                 .map { |g_arr| g_arr.group_by { |v| v.count "\t" } }
